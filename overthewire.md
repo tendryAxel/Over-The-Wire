@@ -201,14 +201,36 @@ The password is JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
 
 ## Level13:
   Dans ce niveau, le but est de décompréser plusieurs fois un fichier pour obtenir un fichier de type text lisible
-mkdir /tmp/axel
-cp data.txt /tmp/axel
 
-cd /tmp/axel
-file [nom du dernier fichier utilliser]
+  J'ai créer un dossier nommé **axel** dans **/tmp/**
+  ```sh
+  mkdir /tmp/axel
+  ```
 
+  J'ai ensuite déplacer le fichier dans ce dossier :
+  ```sh
+  cp data.txt /tmp/axel
+  cd /tmp/axel
+  ```
+
+  ensuite à chaque fois, il faut verifier le type de fichier :
+  ```sh
+  file [nom du dernier fichier  utilliser]
+  ```
+  - si le fichier est gzip, il faut faire :
+```sh
 gzip -d [nom du dernier fichier utilliser]
+```
+  - si le fichier est tar, il faut faire :
+```sh
 tar -xf [nom du dernier fichier utilliser]
+```
+  - si le fichier est bzip2, il faut faire :
+```sh
 bzip2 -d [nom du dernier fichier utilliser]
+```
 
-The password is wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw
+Et finalement, quand on arrive àun fichier de type **text**.
+On a :
+
+The password is **wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw**
